@@ -122,6 +122,8 @@ public class area
         if (args.length != 1)
         {
             System.err.println("\nUso: area <triángulo/cuadrado/rectángulo/círculo>\n");
+
+            System.exit(1);
         }
         else
         {
