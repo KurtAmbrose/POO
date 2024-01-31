@@ -1,0 +1,78 @@
+public class calculadora
+{
+    public char tomarOperacion(String [] operacion)
+    {
+	char op;
+
+	op = '\0';
+	
+	if(operacion.length != 3)
+	    {
+		System.err.println("Uso: calculadora <numero> <operacion (+, -, x, ^, /)> <numero>");
+		System.exit(operacion.length);
+	    }
+
+	if(operacion[1].equals("+"))
+	    {
+		op = '+';
+	    }
+	else if(operacion[1].equals("-"))
+	    {
+		op = '-';
+	    }
+	else if(operacion[1].equals("x"))
+	    {
+		op = 'x';
+	    }
+	else if(operacion[1].equals("/"))
+	    {
+		op = '/';
+	    }
+	else if(operacion[1].equals("^"))
+	    {
+		op = '^';
+	    }
+	else
+	    {
+		System.err.println("\nIngresa una opción correcta\n");
+		System.exit(1);
+	    }
+
+	return op;
+    }
+
+    public double tomarNumero(String nums)
+    {
+	return Double.parseDouble(nums);
+    }
+
+    public double multiplica(double num1, double num2)
+    {
+	return num1 * num2;
+    }
+
+    public double divide(double num1, double num2)
+    {
+	return num1 / num2;
+    }
+
+    public double suma(double num1, double num2)
+    {
+	return num1 + num2;
+    }
+
+    public double resta(double num1, double num2)
+    {
+	return num1 - num2;
+    }
+
+    public double eleva(double num1, double num2)
+    {
+	return Math.pow(num1, num2);
+    }
+
+    public void imprimirResultado(String [] operacion, double res)
+    {
+	System.out.println("\n\nEl resultado de la operacion " + operacion[0] + " " + operacion[1] + " " + operacion[2] + " es: " + res + "\n\n");
+    }
+}

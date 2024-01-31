@@ -1,0 +1,46 @@
+public class usuario
+{
+    public static void main(String [] args)
+    {
+	double num1, num2, resultado;
+	char op;
+
+	resultado = 0;
+	num1 = 0;
+	num2 = 0;
+	
+	calculadora cal = new calculadora();
+
+	op = cal.tomarOperacion(args);
+
+	num1 = cal.tomarNumero(args[0]);
+
+	num2 = cal.tomarNumero(args[2]);
+
+	switch (op)
+	    {
+	    case '+':
+		resultado = cal.suma(num1, num2);
+		break;
+
+	    case '-':
+		resultado = cal.resta(num1, num2);
+		break;
+
+	    case 'x':
+		resultado = cal.multiplica(num1, num2);
+		break;
+
+	    case '/':
+		resultado = cal.divide(num1, num2);
+		break;
+
+	    case '^':
+		resultado = cal.eleva(num1, num2);
+		break;
+	    }
+
+	cal.imprimirResultado(args, resultado);
+	
+    }
+}
