@@ -10,17 +10,17 @@ public class persona
         
         if(negro.regresarEdad() >= 18)
         {
-            System.out.println("\n Negro llamdo " + negro.regresarNombre() + ", usted es mayor de edad :)\n\n");
+            System.out.println("\n" + negro.regresarNombre() + ", usted es mayor de edad :)\n\n");
         }
         else
         {
             if(negro.regresarEdad() < 18 && negro.regresarEdad() > 0)
             {
-                System.out.println("\n Negro llamdo " + negro.regresarNombre() + ", usted es menor de edad :)\n\n");
+                System.out.println("\n" + negro.regresarNombre() + ", usted es menor de edad :)\n\n");
             }
             else
             {
-                System.out.println("\n Negro llamdo " + negro.regresarNombre() + ", usted no ha nacido :]\n\n");
+                System.out.println("\n" + negro.regresarNombre() + ", usted no ha nacido :]\n\n");
             }
         }
     }
