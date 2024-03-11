@@ -46,9 +46,15 @@ public class masElementos {
 
 		});
 
+		//PROGRESS BAR
+		JProgressBar progBarr = new JProgressBar(0, 100);
+		progBarr.setStringPainted(true);
+		progBarr.setValue(100);
 
+		//AGREGA TODOS LOS ELEMENTOS A LA VENTANA INICIAL Y LA MUESTRA
 		frame.add(toggleButton);
 		frame.add(slider);
+		frame.add(progBarr);
 		frame.setVisible(true);
 	}
 }
